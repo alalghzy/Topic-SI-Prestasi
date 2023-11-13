@@ -12,6 +12,14 @@ Topic merupakan Sistem Informasi Prestasi yang berguna untuk mengelola data pres
 Sistem informasi ini terdiri dari 2 role, yaitu admin dan mahasiswa. Role admin dapat memanajemen data mahasiswa, data lomba, dan data prestasi.
 Role mahasiswa hanya dapat memanajemen data lomba sehingga perlu adanya persetujuan dari admin untuk melihat data pada "Perolehan Prestasi".<br>
 
+## Cara Instal
+- duplikat file <em><strong>.env.example</strong></em> ubah namanya menjadi <em><strong>.env</strong></em>
+- `composer update`
+- `php artisan key:generate`
+- `php artisan migrate`
+- `php artisan db:seed --class=AkunSeeder`
+- `php artisan serve`
+
 ## Tampilan Sistem Informasi
 
 ![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/dfcc2d72-3bbc-48b4-98c0-bea91de4466a)
