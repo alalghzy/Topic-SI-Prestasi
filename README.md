@@ -7,60 +7,28 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Topic SI Prestasi
+Topic merupakan Sistem Informasi Prestasi yang berguna untuk mengelola data prestasi Mahasiswa Fakultas Teknik Universitas Bengkulu.
+Sistem informasi ini terdiri dari 2 role, yaitu admin dan mahasiswa. Role admin dapat memanajemen data mahasiswa, data lomba, dan data prestasi.
+Role mahasiswa hanya dapat memanajemen data lomba sehingga perlu adanya persetujuan dari admin untuk melihat data pada "Perolehan Prestasi".<br>
+Sistem informasi ini juga menggunakan fitur 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tampilan Sistem Informasi
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/dfcc2d72-3bbc-48b4-98c0-bea91de4466a)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/01d5fd68-91d9-4d53-a3b3-4565ad99b6de)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/b7269a23-675a-4695-89fd-cceb3ab6307f)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/848dd855-45c5-44ef-812e-b54cd5ba8410)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/c0caca1f-5f03-418c-b526-d10e1dda33b5)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/4adf1898-be4f-4317-9ba7-32040d8eb79a)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/bad62828-f035-4dd4-8990-3684e5e28948)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/416f6a1a-6cf2-4c63-81ee-1713ebd79a96)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/bf265ed8-5c55-49e6-8b47-35dba77faa30)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/eade27d8-b168-46d3-b10a-831135f98943)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/db530c91-57ad-45a0-8956-d01df8f16c54)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/58d8e7fb-bf7f-42c3-8f17-ea6a89da1026)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/68647bd3-9290-4548-8b7f-12cfc4a756d6)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/bb553ab3-d56a-4cac-a6fc-b49062097c9c)
+![image](https://github.com/alalghzy/Topic-SI-Prestasi/assets/65043099/64d6a979-89ed-4267-b894-2ca7cfeaf6a2)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 
