@@ -12,7 +12,9 @@
                         @csrf
                         <div class="col-md-6 mb-1">
                             <label class="form-label">Nama</label>
-                            <input type="text" name="name"
+                            <input readonly disabled type="text" name="name"
+                                class="form-control @error('name') is-invalid @enderror" value="{{ $item->name }}">
+                                <input hidden type="text" name="name"
                                 class="form-control @error('name') is-invalid @enderror" value="{{ $item->name }}">
                             @error('name')
                                 <div class="invalid-feedback">
@@ -23,7 +25,9 @@
 
                         <div class="col-md-6 mb-1">
                             <label class="form-label">NPM</label>
-                            <input type="text" name="npm" class="form-control @error('npm') is-invalid @enderror"
+                            <input disabled readonly type="text" name="npm" class="form-control @error('npm') is-invalid @enderror"
+                            value="{{ $item->npm }}">
+                            <input hidden type="text" name="npm" class="form-control @error('npm') is-invalid @enderror"
                             value="{{ $item->npm }}">
                             @error('npm')
                                 <div class="invalid-feedback">
@@ -35,7 +39,22 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text">Jurusan</label>
                             </div>
-                            <select name="jurusan" class="form-control @error('jurusan') is-invalid @enderror">
+                            <select disabled name="jurusan" class="form-control @error('jurusan') is-invalid @enderror">
+                                <option value="{{ old('jurusan', $item->jurusan) }}">{{ old('jurusan', $item->jurusan) }}</option>
+                                <option value="Informatika" @if (old('jurusan') == 'Informatika') selected @endif>
+                                    Informatika</option>
+                                <option value="Teknik Sipil" @if (old('jurusan') == 'Teknik Sipil') selected @endif>
+                                    Teknik Sipil</option>
+                                <option value="Teknik Elektro" @if (old('jurusan') == 'Teknik Elektro') selected @endif>
+                                    Teknik Elektro</option>
+                                <option value="Teknik Mesin" @if (old('jurusan') == 'Teknik Mesin') selected @endif>
+                                    Teknik Mesin</option>
+                                <option value="Arsiterktur" @if (old('jurusan') == 'Arsitektur') selected @endif>
+                                    Arsitektur</option>
+                                <option value="Sistem Informasi" @if (old('jurusan') == 'Sistem Informasi') selected @endif>
+                                    Sistem Informasi</option>
+                            </select>
+                            <select hidden name="jurusan" class="form-control @error('jurusan') is-invalid @enderror">
                                 <option value="{{ old('jurusan', $item->jurusan) }}">{{ old('jurusan', $item->jurusan) }}</option>
                                 <option value="Informatika" @if (old('jurusan') == 'Informatika') selected @endif>
                                     Informatika</option>
