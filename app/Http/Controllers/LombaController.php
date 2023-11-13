@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Validator;
 class LombaController extends Controller
 {
 
-    // Route Admins
+    // Route Admin
     public function lomba()
     {
         $lomba = Lomba::all();
