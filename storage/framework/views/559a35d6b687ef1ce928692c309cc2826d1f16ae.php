@@ -11,6 +11,13 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Login SI Prestasi</title>
+
+    <style>
+        .topic:hover {
+            color: rgb(255, 158, 48);
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
