@@ -42,7 +42,8 @@
                         <div class="form-group">
                             <label>Foto</label>
                             <input class="form-control" id="formFile" name="profil" type="file">
-                            <small style="color: gray">Disarankan untuk gambar ukuran 3:4 | Maks. 2Mb | png, jpg, jpeg</small>
+                            <small style="color: gray">Disarankan untuk gambar ukuran 3:4 | Maks. 2Mb | png, jpg,
+                                jpeg</small>
                         </div>
                     </div>
             </div>
@@ -140,7 +141,10 @@
                                 <span class="input-group-text bg-white text-muted">
                                     <i class="bi bi-person-lock"></i>
                                 </span>
-                                <input type="text" name="username" readonly
+                                <input type="text" name="username" readonly disabled
+                                    class="form-control @error('username') is-invalid @enderror"
+                                    value="{{ $data->username }}">
+                                <input type="text" name="username" hidden
                                     class="form-control @error('username') is-invalid @enderror"
                                     value="{{ $data->username }}">
                                 @error('email')

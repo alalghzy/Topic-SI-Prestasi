@@ -1,6 +1,6 @@
 
 <section class="contact-section section-padding section-bg" id="section_4">
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-offset="400" data-aos-duration="700">
         <div class="row">
 
             <div class="col-lg-12 col-12 text-center">

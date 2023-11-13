@@ -11,11 +11,11 @@
         </ul>
     </div>
     <div class="row">
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
             <div class="widget-small primary coloured-icon"><i class="icon bi bi-people fs-1"></i>
                 <div class="info">
                     <a href="mahasiswa">
-                        <p class="btn btn-light mt-2">Manajemen Mahasiswa</p>
+                        <p class="btn btn-light   mt-2">Manajemen Mahasiswa</p>
                     </a></br>
                     <button type="button" data-bs-toggle="modal" data-bs-target="#modalMahasiswa"
                         class="btn btn-warning font-extrabold mt-1 mb-2 purecounter" data-purecounter-start="0"
@@ -24,11 +24,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
             <div class="widget-small success coloured-icon"><i class="icon bi bi-award fs-1"></i>
                 <div class="info">
                     <a href="lomba">
-                        <p class="btn btn-light mt-2">Manajemen Lomba</p>
+                        <p class="btn btn-light  mt-2">Manajemen Lomba</p>
                     </a></br>
                     <button type="button" data-bs-toggle="modal" data-bs-target="#modalLomba"
                         class="btn btn-warning font-extrabold mt-1 mb-2 purecounter" data-purecounter-start="0"
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
             <div class="widget-small danger coloured-icon"><i class="icon bi bi-trophy fs-1"></i>
                 <div class="info">
                     <a href="prestasi">

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand" href="/" style="color: rgb(6, 80, 177) text-decoration: none;">
+        <a class="navbar-brand" href="/#section_1" style="color: rgb(6, 80, 177) text-decoration: none;">
             <i class="bi-back"></i>
             <span>Topic</span>
         </a>
@@ -55,6 +55,11 @@
                 @if (auth()->check() && auth()->user()->level == 'admin')
                     <div class="d-none d-lg-block ms-2">
                         <a href="/admin" class="navbar-icon rounded bi bi-house-gear smoothscroll"></a>
+                    </div>
+                @endif
+                @if (auth()->check() && auth()->user()->level == 'mahasiswa')
+                    <div class="d-none d-lg-block ms-2">
+                        <a href="/user" class="navbar-icon rounded bi bi-house-gear smoothscroll"></a>
                     </div>
                 @endif
             @endguest

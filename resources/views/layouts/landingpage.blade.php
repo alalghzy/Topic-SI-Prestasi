@@ -25,6 +25,8 @@
 
     <link href="{{ asset('landingpage/css/templatemo-topic-listing.css') }}  " rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
         .topic:hover {
             color: rgb(255, 144, 17);
@@ -107,6 +109,11 @@
                 timer: 2000
             });
         @endif
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>

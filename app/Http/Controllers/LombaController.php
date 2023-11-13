@@ -13,13 +13,11 @@ use Illuminate\Support\Facades\Validator;
 class LombaController extends Controller
 {
 
-    // Route Admina
+    // Route Admin
     public function lomba()
     {
         $lomba = Lomba::all();
-        return view('admin.lomba', compact(['lomba']), [
-            "title" => 'Manajemen Lomba'
-        ]);
+        return view('admin.lomba', compact(['lomba']));
     }
 
     public function admin_create_lomba(Request $request)
@@ -172,24 +170,17 @@ class LombaController extends Controller
         return redirect()->route('user_lomba')->with('sukses', 'Lomba Berhasil Didaftarkan');;
     }
 
-    public function user_edit_lomba($id)
-    {
-        $lomba = Lomba::where('name', Auth::user()->name)->first();
-        return view('mahasiswa.edit_lomba', compact(['lomba']), [
-            "title" => 'Manajemen Lomba'
-        ]);
-    }
-
     public function user_update_lomba(Request $request, $id)
     {
-        $lomba = Lomba::where('name', Auth::user()->name)->first();
+        // Menggunakan ID lomba untuk mengidentifikasi record yang akan diperbarui
+        $lomba = Lomba::findOrFail($id);
 
         $validator = Validator::make($request->all(), [
             'lomba' => 'required',
             'penyelenggara' => 'required',
             'tingkat' => 'required',
             'date' => 'required',
-            'sertifikat'  => 'required|mimes:jpg,jpeg,png,pdf',
+            'sertifikat' => 'mimes:jpg,jpeg,png,pdf', // Menghapus karakter | yang tidak diperlukan
         ]);
 
         if ($validator->fails()) {
@@ -199,35 +190,42 @@ class LombaController extends Controller
                 ->withErrors($validator);
         }
 
-        // Ambil File Kemudian Hapus
-        $file = $lomba->sertifikat;
-        // Impor Illuminate\Support\Facades\File
-        File::delete($file);
-        //
+        // Inisialisasi variabel $namafile di luar blok kondisi
+        $namafile = null;
 
-        $perubahan = $request->sertifikat;
+        // Hanya jika ada file sertifikat baru yang diunggah
+        if ($request->hasFile('sertifikat')) {
+            // Ambil File Kemudian Hapus
+            $file = $lomba->sertifikat;
+            // Impor Illuminate\Support\Facades\File
+            File::delete(public_path($file));
 
-        $namafile = time() . '_' . Auth::user()->name . '_' . $perubahan->getClientOriginalName();
-        $perubahan->move('sertifikat/', $namafile);
+            $perubahan = $request->file('sertifikat');
+
+            $namafile = time() . '_' . Auth::user()->name . '_' . $perubahan->getClientOriginalName();
+            $perubahan->move('sertifikat/', $namafile);
+        }
 
         $cek = [
             'user_id' => Auth::user()->username,
             'name' => Auth::user()->name,
             'npm' => Auth::user()->username,
             'jurusan' => Auth::user()->jurusan,
-            'lomba' => $request['lomba'],
-            'penyelenggara' => $request['penyelenggara'],
-            'tingkat' => $request['tingkat'],
-            'tanggal' => $request['date'],
-            'sertifikat' => 'sertifikat/' . $namafile,
+            'lomba' => $request->input('lomba'),
+            'penyelenggara' => $request->input('penyelenggara'),
+            'tingkat' => $request->input('tingkat'),
+            'tanggal' => $request->input('date'),
+            'sertifikat' => $namafile ? 'sertifikat/' . $namafile : $lomba->sertifikat,
         ];
 
-
+        // Menggunakan metode update untuk mengupdate data
         if ($lomba->update($cek)) {
-            $lomba->save();
+            return redirect()->route('user_lomba')->with('sukses', 'Data Berhasil Diedit');
+        } else {
+            return back()->with('failed', 'Data gagal diedit. Silakan coba lagi.');
         }
-        return redirect()->route('user_lomba')->with('sukses', 'Data Berhasil Diedit');
     }
+
 
     public function user_delete_lomba($id)
     {

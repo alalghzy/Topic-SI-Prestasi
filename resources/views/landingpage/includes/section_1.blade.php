@@ -1,5 +1,5 @@
 <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
         <div class="row">
 
             <div class="col-lg-12 col-12 mx-auto">
@@ -15,7 +15,7 @@
 
 
 <section class="featured-section">
-    <div class="container">
+    <div class="container" data-aos="fade-down">
         <div class="row justify-content-center">
 
             <div class="col-lg-4 col-12 mb-4 mb-lg-0">
@@ -52,7 +52,7 @@
                                 <h5 class="mb-2">Manajemen Prestasi</h5>
 
                                 <p class="mb-0">
-                                    Perolehan prestasi yang dimasukkan akan disetujui oleh Admin.
+                                    Perolehan prestasi akan disetujui oleh Admin. Data bisa diunduh pada laman prestasi.
                                 </p>
                             </div>
 
@@ -75,11 +75,11 @@
 
 
 <section class="explore-section section-padding" id="">
-    <div class="container">
+    <div class="container" >
 
-        <div class="col-12 text-center">
+        <div class="col-12 text-center" data-aos="fade-up" data-aos-offset="400" data-aos-duration="700">
             <h2 class="mb-4">
-                Bersama <a class="topic" href="#beranda"><i class="bi-back"></i> <span>Topic</span></a> ,
+                Bersama <a class="topic" href="/#section_1"><i class="bi-back"></i> <span>Topic</span></a> ,
                 Ayo Raih Prestasimu!
             </h2>
         </div>

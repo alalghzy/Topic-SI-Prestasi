@@ -24,8 +24,19 @@
                         @include('admin.includes.mahasiswa.modalTambahMahasiswa')
 
                         @if (session('sukses'))
-                            <div class="alert alert-success">
-                                {{ session('sukses') }}
+                            <div class="bs-component">
+                                <div class="alert alert-dismissible alert-success">
+                                    <button class="btn-close" type="button"
+                                        data-bs-dismiss="alert"></button>{{ session('sukses') }}
+                                </div>
+                            </div>
+                        @endif
+                        @if (session('failed'))
+                            <div class="bs-component">
+                                <div class="alert alert-dismissible alert-danger">
+                                    <button class="btn-close" type="button"
+                                        data-bs-dismiss="alert"></button>{{ session('failed') }}
+                                </div>
                             </div>
                         @endif
                         <table class="table table-bordered" id="tabelMahasiswa">
@@ -76,17 +87,17 @@
             </div>
         </div>
     </div>
-    @endsection
+@endsection
 
-    @push('script')
-        {{-- Datatables --}}
-        <script type="text/javascript" src=" {{ asset('admins/js/plugins/jquery.dataTables.min.js') }} "></script>
-        <script type="text/javascript" src="{{ asset('admin/js/plugins/dataTables.bootstrap.min.js') }}"></script>
-        <script type="text/javascript">
-            $('#tabelMahasiswa').DataTable({
-                "lengthMenu": [5, 10, 20, 30, 50],
-                "pageLength": 5
-            });
-        </script>
-        </script>
-    @endpush
+@push('script')
+    {{-- Datatables --}}
+    <script type="text/javascript" src=" {{ asset('admins/js/plugins/jquery.dataTables.min.js') }} "></script>
+    <script type="text/javascript" src="{{ asset('admin/js/plugins/dataTables.bootstrap.min.js') }}"></script>
+    <script type="text/javascript">
+        $('#tabelMahasiswa').DataTable({
+            "lengthMenu": [5, 10, 20, 30, 50],
+            "pageLength": 5
+        });
+    </script>
+    </script>
+@endpush

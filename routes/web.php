@@ -65,7 +65,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('user_lomba', [UserController::class, 'user_lomba'])->name('user_lomba');
         Route::post('user_lomba', [LombaController::class, 'user_create_lomba'])->name('add_proses_user.store');
         Route::post('user_update_lomba/{id}', [LombaController::class, 'user_update_lomba'])->name('user_update_lomba');
-        Route::get('user_lomba/delete/{id}', [LombaController::class, 'user_delete_lomba'])->name('hapus_lomba');
+        Route::delete('user_lomba/delete/{id}', [LombaController::class, 'user_delete_lomba'])->name('hapus_lomba');
 
         // Route Perolehan Prestasi
         Route::get('user_prestasi', [UserController::class, 'user_prestasi'])->name('user_prestasi');

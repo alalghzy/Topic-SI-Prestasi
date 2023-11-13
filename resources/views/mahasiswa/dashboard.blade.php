@@ -20,21 +20,21 @@
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
             <div class="widget-small success coloured-icon"><i class="icon bi bi-award fs-1"></i>
                 <div class="info">
                     <a href="{{ route('user_lomba') }}">
-                        <p class="btn btn-light mt-2">Manajemen Lomba</p>
+                        <p class="btn btn-light">Manajemen Lomba</p>
                     </a></br>
 
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
             <div class="widget-small danger coloured-icon"><i class="icon bi bi-trophy fs-1"></i>
                 <div class="info">
                     <a href="{{ route('user_prestasi') }}">
-                        <p class="btn btn-light mt-2">Perolehan Prestasi</p>
+                        <p class="btn btn-light">Perolehan Prestasi</p>
                     </a></br>
 
                 </div>

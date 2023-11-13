@@ -23,8 +23,19 @@
                         </button>
 
                         @if (session('sukses'))
-                            <div class="alert alert-success">
-                                {{ session('sukses') }}
+                            <div class="bs-component">
+                                <div class="alert alert-dismissible alert-success">
+                                    <button class="btn-close" type="button"
+                                        data-bs-dismiss="alert"></button>{{ session('sukses') }}
+                                </div>
+                            </div>
+                        @endif
+                        @if (session('failed'))
+                            <div class="bs-component">
+                                <div class="alert alert-dismissible alert-danger">
+                                    <button class="btn-close" type="button"
+                                        data-bs-dismiss="alert"></button>{{ session('failed') }}
+                                </div>
                             </div>
                         @endif
 
