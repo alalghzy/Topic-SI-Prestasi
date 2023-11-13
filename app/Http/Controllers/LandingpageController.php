@@ -11,10 +11,7 @@ class LandingpageController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->get();
-        return view('layouts.landingpage', compact(['posts']), [
-            "title" => 'Beranda'
-        ]);
+        return view('layouts.landingpage');
     }
 
     public function data_prestasi(Request $request)

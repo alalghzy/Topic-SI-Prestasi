@@ -145,16 +145,48 @@
         }
     </script>
 
-        {{-- Datatables --}}
-        <script type="text/javascript" src=" {{ asset('admins/js/plugins/jquery.dataTables.min.js') }} "></script>
-        <script type="text/javascript">
-            $('#tabelPrestasi').DataTable({
-                "lengthMenu": [5, 10, 20, 30, 50],
-                "pageLength": 5
-            });
-        </script>
-        </script>
+    {{-- Datatables --}}
+    <script type="text/javascript" src=" {{ asset('admins/js/plugins/jquery.dataTables.min.js') }} "></script>
+    <script type="text/javascript">
+        $('#tabelPrestasi').DataTable({
+            "lengthMenu": [5, 10, 20, 30, 50],
+            "pageLength": 5
+        });
+    </script>
+    </script>
 
+    {{-- Sweet Alert 2 --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Tangkap elemen tautan "Logout"
+            const logoutLink = document.getElementById("logout-link");
+
+            // Tambahkan event listener untuk mengkonfirmasi logout saat tautan diklik
+            logoutLink.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                Swal.fire({
+                    title: "Konfirmasi Logout",
+                    text: "Apakah Anda yakin ingin logout?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Logout",
+                    cancelButtonText: "Batal",
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    customClass: {
+                        confirmButton: "btn btn-success",
+                        cancelButton: "btn btn-danger",
+                    },
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "{{ route('logout') }}";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
