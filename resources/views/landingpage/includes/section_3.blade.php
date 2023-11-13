@@ -1,5 +1,5 @@
 <section class="faq-section section-padding" id="section_3">
-    <div class="container" data-aos="fade-up" data-aos-offset="500" data-aos-duration="700">
+    <div class="container" data-aos="fade-up" data-aos-offset="350" data-aos-duration="700">
         <div class="row">
 
             <div class="col-lg-6 col-12">
