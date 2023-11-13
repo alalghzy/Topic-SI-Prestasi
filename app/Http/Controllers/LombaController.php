@@ -32,7 +32,7 @@ class LombaController extends Controller
             'penyelenggara' => 'required',
             'tingkat' => 'required',
             'date' => 'required',
-            'sertifikat'  => 'required|mimes:png,pdf',
+            'sertifikat'  => 'required|mimes:jpg,jpeg,png,pdf',
         ]);
 
         if ($validator->fails()) {
@@ -71,7 +71,7 @@ class LombaController extends Controller
             'penyelenggara' => 'required',
             'tingkat' => 'required',
             'date' => 'required',
-            'sertifikat'  => 'required|mimes:png,pdf',
+            'sertifikat'  => 'required|mimes:jpg,jpeg,png,pdf',
         ]);
 
         if ($validator->fails()) {
@@ -139,13 +139,21 @@ class LombaController extends Controller
     //Route Mahasiswa
     public function user_create_lomba(Request $request)
     {
-        $validasi = $request->validate([
+
+        $validator = Validator::make($request->all(), [
             'lomba' => 'required',
             'penyelenggara' => 'required',
             'tingkat' => 'required',
             'date' => 'required',
-            'sertifikat'  => 'required|mimes:png,pdf',
+            'sertifikat'  => 'required|mimes:jpg,jpeg,png,pdf',
         ]);
+
+        if ($validator->fails()) {
+            return back()
+                ->with('failed', 'Data gagal ditambahkan!')
+                ->withInput()
+                ->withErrors($validator);
+        }
 
         $namafile = time() . '_' . Auth::user()->name . '_' . $request->sertifikat->getClientOriginalName();
         $request->sertifikat->move('sertifikat/', $namafile);
@@ -176,13 +184,20 @@ class LombaController extends Controller
     {
         $lomba = Lomba::where('name', Auth::user()->name)->first();
 
-        $validasi = $request->validate([
+        $validator = Validator::make($request->all(), [
             'lomba' => 'required',
             'penyelenggara' => 'required',
             'tingkat' => 'required',
             'date' => 'required',
-            'sertifikat'  => 'required|mimes:png,pdf',
+            'sertifikat'  => 'required|mimes:jpg,jpeg,png,pdf',
         ]);
+
+        if ($validator->fails()) {
+            return back()
+                ->with('failed', 'Data gagal ditambahkan!')
+                ->withInput()
+                ->withErrors($validator);
+        }
 
         // Ambil File Kemudian Hapus
         $file = $lomba->sertifikat;
