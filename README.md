@@ -11,7 +11,6 @@
 Topic merupakan Sistem Informasi Prestasi yang berguna untuk mengelola data prestasi Mahasiswa Fakultas Teknik Universitas Bengkulu.
 Sistem informasi ini terdiri dari 2 role, yaitu admin dan mahasiswa. Role admin dapat memanajemen data mahasiswa, data lomba, dan data prestasi.
 Role mahasiswa hanya dapat memanajemen data lomba sehingga perlu adanya persetujuan dari admin untuk melihat data pada "Perolehan Prestasi".<br>
-Sistem informasi ini juga menggunakan fitur 
 
 ## Tampilan Sistem Informasi
 
