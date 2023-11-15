@@ -26,6 +26,6 @@ class Cek_Login
             return $next($request);
 
 
-        return redirect('login')->with('error',"Kamu Tidak Punya Hak Akses");
+        return redirect('login')->with('failed',"Kamu Tidak Punya Hak Akses!");
     }
 }

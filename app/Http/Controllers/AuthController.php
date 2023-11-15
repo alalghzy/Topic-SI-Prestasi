@@ -82,9 +82,17 @@ class AuthController extends Controller
     }
 
     public function send_request_reset(Request $request){
-        $request->validate([
+
+        $validator = Validator::make($request->all(), [
             'email' => 'required|email|exists:users,email'
         ]);
+
+        if ($validator->fails()) {
+            return back()
+                ->with('failed', 'Gagal mengirim email!')
+                ->withInput()
+                ->withErrors($validator);
+        }
 
         $token = \Str::random(64);
 
@@ -111,11 +119,19 @@ class AuthController extends Controller
     }
 
     public function update_password(Request $request){
-        $request->validate([
+
+        $validator = Validator::make($request->all(), [
             'email'=>'required|email|exists:users,email',
             'password'=>'required|min:5|confirmed',
             'password_confirmation'=>'required',
         ]);
+
+        if ($validator->fails()) {
+            return back()
+                ->with('failed', 'Gagal ubah password!')
+                ->withInput()
+                ->withErrors($validator);
+        }
 
         $check_token = \DB::table('password_resets')->where([
             'email'=>$request->email,

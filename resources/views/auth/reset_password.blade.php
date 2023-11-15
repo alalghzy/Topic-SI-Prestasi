@@ -112,11 +112,11 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        @if (Session::has('eror'))
+        @if (Session::has('failed'))
             Swal.fire({
                 icon: 'error',
                 title: 'Gagal!',
-                text: "{{ Session::get('eror') }}",
+                text: "{{ Session::get('failed') }}",
                 showConfirmButton: true,
             });
         @endif

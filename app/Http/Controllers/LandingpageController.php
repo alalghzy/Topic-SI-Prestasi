@@ -17,30 +17,7 @@ class LandingpageController extends Controller
     public function data_prestasi(Request $request)
     {
         $kejuaraan = Prestasi::get();
-        return view('landingpage.data_prestasi', compact(['kejuaraan']), [
-            "title" => 'Prestasi'
-        ]);
-    }
-
-    public function berita()
-    {
-        return view('landingpage.berita', [
-            "title" => 'Berita'
-        ]);
-    }
-
-    public function postingan()
-    {
-        return view('landingpage.postingan', [
-            "title" => 'Berita'
-        ]);
-    }
-
-    public function visi_misi()
-    {
-        return view('landingpage.visi_misi', [
-            "title" => 'Visi Misi'
-        ]);
+        return view('landingpage.data_prestasi', compact(['kejuaraan']));
     }
 
     public function logout(Request $request)

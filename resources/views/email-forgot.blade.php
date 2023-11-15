@@ -488,7 +488,7 @@
                             align="center">
                             <a href="https://example.com" class="f-fallback email-masthead_name"
                                 style="color: #A8AAAF; font-size: 16px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white;">
-                                SI Manajemen Prestasi
+                                Topic Sistem Informasi Prestasi
                             </a>
                         </td>
                     </tr>
@@ -506,7 +506,7 @@
                                         style="word-break: break-word; font-family: &quot;Nunito Sans&quot;, Helvetica, Arial, sans-serif; font-size: 16px; padding: 45px;">
                                         <div class="f-fallback">
                                             <h1 style="margin-top: 0; color: #333333; font-size: 22px; font-weight: bold; text-align: left;"
-                                                align="left">Forgot password Email</h1>
+                                                align="left">Lupa Password</h1>
                                             <p
                                                 style="font-size: 16px; line-height: 1.625; color: #51545E; margin: .4em 0 1.1875em;">
                                                 {!! $body !!}</p>
@@ -527,8 +527,7 @@
                                                                     <a target="_blank" href="{{ $action_link }}"
                                                                         class="f-fallback button button--green"
                                                                         target="_blank"
-                                                                        style="color: #FFF; border-color: #22bc66; border-style: solid; border-width: 10px 18px; background-color: #22BC66; display: inline-block; text-decoration: none; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); -webkit-text-size-adjust: none; box-sizing: border-box;">Reset
-                                                                        your password</a>
+                                                                        style="color: #FFF;  background-color: #22BC66; display: inline-block; text-decoration: none; border-radius: 10px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); -webkit-text-size-adjust: none; box-sizing: border-box;">Reset password</a>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -569,7 +568,7 @@
                                         style="word-break: break-word; font-family: &quot;Nunito Sans&quot;, Helvetica, Arial, sans-serif; font-size: 16px; padding: 45px;">
                                         <p class="f-fallback sub align-center"
                                             style="font-size: 13px; line-height: 1.625; text-align: center; color: #A8AAAF; margin: .4em 0 1.1875em;"
-                                            align="center">© 2023 <strong><i class="bi-back"></i> Topic></strong>. All rights reserved.</p>
+                                            align="center">© 2023 <strong><i class="bi-back"></i> Topic</strong>. All rights reserved.</p>
 
                                     </td>
                                 </tr>
